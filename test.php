@@ -20,6 +20,7 @@
     <script>
 
         console.log("test");
+        console.log("version test");
     </script>
 </body>
 </html>
