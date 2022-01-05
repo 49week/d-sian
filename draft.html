@@ -27,14 +27,15 @@
         
         /* 컨텐츠 */
         .contents{position: relative; width: 100%; padding: 0 50px 50px; box-sizing: border-box;} 
-        .over_box{background: rgba(0,0,0,0.5);  position: absolute; left: 0; top: 0; width: 0; height:0; text-align: center; transition: 0.5s;}
+        .over_box{background: rgba(0,0,0,0.5);  position: absolute; left: 0; top: 0; width: 100%; height: 100%; text-align: center; transition: 0.5s; opacity: 0;}
+        .over_box:hover{opacity: 1;}
         .over_box>p{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); color: #fff;}
         .contents>div{margin-bottom: 50px;} 
         .contents .making_date{position: relative; width: 100%; font-size: 24px; line-height: 75px; font-weight: bold;}
         .contents .wrap_cnt{position: relative; width: 100%; }
         .contents .wrap_cnt .list_title{position: relative; line-height: 50px; border: 1px solid #ccc; display: inline-block; border-bottom: none; padding: 0 25px; margin-left: 25px; z-index: 999;top: 0.7px; background-color: #fff;}
         .contents .wrap_cnt .wrap_list{position: relative; width: 100%; padding: 25px 25px; border: 1px solid #ccc; display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center;}
-        .contents .wrap_cnt .wrap_list .inner_list{width:20%; display: flex; flex-direction: column; align-items: center; padding: 10px;}
+        .contents .wrap_cnt .wrap_list .inner_list{width:20%; display: flex; flex-direction: column; align-items: center; padding: 10px; position: relative;}
         .contents .wrap_cnt .wrap_list .inner_list .box_img{width: 100%;}
         .contents .wrap_cnt .wrap_list .inner_list .box_img img{width: 100%;}
         .contents .wrap_cnt .wrap_list .inner_list .title_img{padding-top: 10px;}
@@ -74,29 +75,31 @@
             <div class="making_date">2022. 01. 05.</div>
             <div class="wrap_cnt">
                 <h2 class="list_title">A 디자인 ver.2 (요청 사항 반영)</h2>
-                <input type="radio" name="design_A" value="finalDecision">
+                <input type="radio" name="checked" value="finalDecision">
                 <button>제출하기</button>
                 <div class="wrap_list">
-                    <div id="selected" class="over_box">
-                       <p>+ 자세히 보기</p>
-                    </div>
                     <a href="javascript:" class="inner_list">
+                        <div class="over_box"><p>+ 자세히 보기</p></div>
                         <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
                         <h3 class="title_img">A 시안 메인 페이지 1</h3>
                     </a>
                     <a href="javascript:" class="inner_list">
+                        <div class="over_box"><p>+ 자세히 보기</p></div>
                         <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
                         <h3 class="title_img">A 시안 메인 페이지 2</h3>
                     </a>
                     <a href="javascript:" class="inner_list">
+                        <div class="over_box"><p>+ 자세히 보기</p></div>
                         <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
                         <h3 class="title_img">A 시안 서브 페이지 1</h3>
                     </a>
                     <a href="javascript:" class="inner_list">
+                        <div class="over_box"><p>+ 자세히 보기</p></div>
                         <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
                         <h3 class="title_img">A 시안 서브 페이지 2</h3>
                     </a>
                     <a href="javascript:" class="inner_list">
+                        <div class="over_box"><p>+ 자세히 보기</p></div>
                         <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
                         <h3 class="title_img">A 시안 서브 페이지 3</h3>
                     </a>
@@ -107,29 +110,31 @@
             <div class="making_date">2022. 01. 04.</div>
             <div class="wrap_cnt">
                 <h2 class="list_title">A 디자인</h2>
-                <input type="radio" name="design_A" value="finalDecision">
+                <input type="radio" name="checked" value="finalDecision">
                 <button>제출하기</button>
                 <div class="wrap_list">
-                    <div id="selected" class="over_box">
-                         <p>+ 자세히 보기</p>
-                    </div>
                     <a href="javascript:" class="inner_list">
+                        <div class="over_box"><p>+ 자세히 보기</p></div>
                         <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
                         <h3 class="title_img">A 시안 메인 페이지 1</h3>
                     </a>
                     <a href="javascript:" class="inner_list">
+                        <div class="over_box"><p>+ 자세히 보기</p></div>
                         <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
                         <h3 class="title_img">A 시안 메인 페이지 2</h3>
                     </a>
                     <a href="javascript:" class="inner_list">
+                        <div class="over_box"><p>+ 자세히 보기</p></div>
                         <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
                         <h3 class="title_img">A 시안 서브 페이지 1</h3>
                     </a>
                     <a href="javascript:" class="inner_list">
+                        <div class="over_box"><p>+ 자세히 보기</p></div>
                         <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
                         <h3 class="title_img">A 시안 서브 페이지 2</h3>
                     </a>
                     <a href="javascript:" class="inner_list">
+                        <div class="over_box"><p>+ 자세히 보기</p></div>
                         <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
                         <h3 class="title_img">A 시안 서브 페이지 3</h3>
                     </a>
@@ -139,30 +144,32 @@
         <div class="cnt_3">
             <div class="making_date">2022. 01. 03.</div>
             <div class="wrap_cnt">
-                <div id="selected" class="over_box">
-                     <p>+ 자세히 보기</p>
-                </div>
                 <h2 class="list_title">B 디자인</h2>
-                <input type="radio" name="design_B" value="finalDecision">
+                <input type="radio" name="checked" value="finalDecision">
                 <button>제출하기</button>
                 <div class="wrap_list">
                     <a href="javascript:" class="inner_list">
+                        <div class="over_box"><p>+ 자세히 보기</p></div>
                         <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
                         <h3 class="title_img">B 시안 메인 페이지 1</h3>
                     </a>
                     <a href="javascript:" class="inner_list">
+                        <div class="over_box"><p>+ 자세히 보기</p></div>
                         <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
                         <h3 class="title_img">B 시안 메인 페이지 2</h3>
                     </a>
                     <a href="javascript:" class="inner_list">
+                        <div class="over_box"><p>+ 자세히 보기</p></div>
                         <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
                         <h3 class="title_img">B 시안 서브 페이지 1</h3>
                     </a>
                     <a href="javascript:" class="inner_list">
+                        <div class="over_box"><p>+ 자세히 보기</p></div>
                         <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
                         <h3 class="title_img">B 시안 서브 페이지 2</h3>
                     </a>
                     <a href="javascript:" class="inner_list">
+                        <div class="over_box"><p>+ 자세히 보기</p></div>
                         <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
                         <h3 class="title_img">B 시안 서브 페이지 3</h3>
                     </a>
@@ -171,27 +178,15 @@
         </div>
 </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
-        let selected = document.getElementById("selected");
-        let cntList = document.querySelectorAll(".wrap_list>a");
-        function hoverIn(e){
-            selected.style.left = e.offsetLeft + "px";
-            selected.style.width = e.offsetWidth + "px";
-            selected.style.height = e.offsetHeight + "px";
-            selected.style.top = e.offsetTop + "px";
-        }
-        function hoverOut(e){
-            selected.style.width = 0 + "px";
-            selected.style.height = 0 + "px";
-            
-        }
+    <!-- <script>= ntByI);
+       hoverIn(style.left = etLeft + "pstyl  }
+        function hoverOut(style.width = 0 pstyle.height =     }
         cntList.forEach((menu) => 
             menu.addEventListener("mouseenter", (e) => hoverIn(e.currentTarget))
         );
         cntList.forEach((menu) => 
             menu.addEventListener("mouseleave", (e) => hoverOut(e.currentTarget))
         );
-         const test = 0;
-    </script>
+    </script> -->
 </body>
 </html>
