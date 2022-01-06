@@ -14,41 +14,47 @@
         h1,h2,h3,h4,div,p,a,li,ul,span{color: #1f1f1f; font-size: 16px; font-family: "맑은 고딕", sans-serif; font-weight: normal;}
         /* 공용 */
         
+        /* 위로가기 버튼 */
+        .btn_top{position: fixed; bottom: 20px; right: 20px; background: #ccc;padding: 10px; border-radius: 5px; cursor: pointer; display: block; z-index: 9999;}
         /* 헤더 */
-        header{position: relative; width: 100%; height: 50px; background: #393D49; display: flex; justify-content: space-between; } 
+        header{position: relative; width: 100%; height: 50px; background: #393D49; display: flex; justify-content: space-between; margin-bottom: 25px;} 
+        header>*{min-width: 20%;}
         header h1{color: #fff; text-align: center; line-height: 50px; font-size: 24px; font-weight: bold;} 
-        header .gnb{display: flex; justify-content: space-between; align-items: center; width: 20%;} 
+        header .gnb{display: flex; justify-content: space-between; align-items: center;} 
         header .gnb a{color: #fff;} 
-        header .utill{display: flex; justify-content: space-between; align-items: center; width: 10%;} 
+        header .utill{display: flex; justify-content: space-evenly; align-items: center;} 
         header .utill a{color: #fff;} 
         
         /* 컨텐츠 */
-        .contents{position: relative; width: 100%; padding: 0 50px 50px; box-sizing: border-box; overflow: hidden;} 
-        .contents .making_date{position: relative; width: 100%; font-size: 24px; line-height: 75px;}
-        .contents .wrap_tabs_title{position: relative; height: 50px; margin-left: 25px; display: flex; align-items: center;}
-        .contents .wrap_tabs_title a{display: block; border: 1px solid #ccc; min-width: 130px; text-align: center; border-bottom: none; line-height: 50px; background-color: #ccc; z-index: 999; }
-        .contents .wrap_tabs_title a:first-child{border-right: none;}
-        .contents .wrap_tabs_title a.selected{background-color: #fff;}
-        .contents .wrap_tabs_list{position: relative; width: 100%; padding: 25px 0; border: 1px solid #ccc; top: -0.2px; display: flex; flex-wrap: wrap; justify-content: space-around;}
-        .contents .wrap_tabs_list .wrap_list{width: 20%; padding: 10px 20px;}
-        .contents .wrap_tabs_list .wrap_list img{width: 100%;}
-        .contents .wrap_tabs_list .title_img{text-align: center; padding-top: 15px; }
-        .contents .wrap_tabs_list.tabs_2{display: none;}
+        .contents{position: relative; width: 100%; padding: 0 50px 50px; box-sizing: border-box;} 
+        .over_box{background: rgba(0,0,0,0.5);  position: absolute; left: 0; top: 0; width: 100%; height: 100%; text-align: center; transition: 0.5s; opacity: 0;}
+        .over_box:hover{opacity: 1;}
+        .over_box>p{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); color: #fff;}
+        .contents>div{margin-bottom: 50px;} 
+        .contents .making_date{position: relative; width: 100%; font-size: 24px; line-height: 75px; font-weight: bold;}
+        .contents .wrap_cnt{position: relative; width: 100%; }
+        .contents .wrap_cnt .list_title{position: relative; line-height: 50px; border: 1px solid #ccc; display: inline-block; border-bottom: none; padding: 0 25px; margin-left: 25px; z-index: 999;top: 0.7px; background-color: #fff;}
+        .contents .wrap_cnt .wrap_list{position: relative; width: 100%; padding: 25px 25px; border: 1px solid #ccc; display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center;}
+        .contents .wrap_cnt .wrap_list .inner_list{width:20%; display: flex; flex-direction: column; align-items: center; padding: 10px; position: relative;}
+        .contents .wrap_cnt .wrap_list .inner_list .box_img{width: 100%;}
+        .contents .wrap_cnt .wrap_list .inner_list .box_img img{width: 100%;}
+        .contents .wrap_cnt .wrap_list .inner_list .title_img{padding-top: 10px;}
 
         @media screen and (min-width: 701px) and (max-width: 1000px){
-            .contents .wrap_tabs_list .wrap_list{width: 30%;}
+            .contents .wrap_list .inner_list{width: 33%;}
         }
         @media screen and (min-width: 501px) and (max-width: 700px){
-            .contents .wrap_tabs_list .wrap_list{width: 50%;}
+            .contents .wrap_list .inner_list{width: 50%;}
             .contents{padding: 0 30px 30px; } 
         }
         @media screen and (max-width: 500px){
-            .contents .wrap_tabs_list .wrap_list{width: 100%;}
+            .contents .wrap_list .inner_list{width: 100%;}
             .contents{padding: 0 30px 30px; } 
         }
     </style>
 </head>
 <body>
+    <a href="#" class="btn_top">TOP</a>
     <header>
         <!-- 좌측 회사로고 -->
         <h1 class="logo">로고</h1>
@@ -65,72 +71,112 @@
         </nav>
     </header>
     <section class="contents">
-        <!-- 작성일 날짜 정보 -->
-        <h2 class="making_date">2022. 01. 04.</h2>
-        <!-- 시안 목록 -->
-        <div class="wrap_tabs_title">
-            <a href="javascript:" id="tabs_1" class="main_page selected">MAIN PAGE</a>
-            <a href="javascript:" id="tabs_2" class="sub_page">SUB PAGE</a>
-        </div>  
-        <!-- 메인 페이지 시안 -->
-        <div class="wrap_tabs_list tabs_1">
-            <a href="javascript:" class="wrap_list list_1">
-                <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
-                <h3 class="title_img">메인 페이지 시안1</h3>
-            </a>
-            <a href="javascript:" class="wrap_list list_2">
-                <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
-                <h3 class="title_img">메인 페이지 시안2</h3>
-            </a>
-            <a href="javascript:" class="wrap_list list_3">
-                <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
-                <h3 class="title_img">메인 페이지 시안3</h3>
-            </a>
-            <a href="javascript:" class="wrap_list list_4">
-                <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
-                <h3 class="title_img">메인 페이지 시안4</h3>
-            </a>
-            <a href="javascript:" class="wrap_list list_5">
-                <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
-                <h3 class="title_img">메인 페이지 시안5</h3>
-            </a>
+        <div class="cnt_1">
+            <div class="making_date">2022. 01. 05.</div>
+            <div class="wrap_cnt">
+                <h2 class="list_title">A 디자인 ver.2 (요청 사항 반영)</h2>
+                <input type="radio" name="checked" value="finalDecision">
+                <button>제출하기</button>
+                <div class="wrap_list">
+                    <a href="javascript:" class="inner_list">
+                        <div class="over_box"><p>+ 자세히 보기</p></div>
+                        <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
+                        <h3 class="title_img">A 시안 메인 페이지 1</h3>
+                    </a>
+                    <a href="javascript:" class="inner_list">
+                        <div class="over_box"><p>+ 자세히 보기</p></div>
+                        <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
+                        <h3 class="title_img">A 시안 메인 페이지 2</h3>
+                    </a>
+                    <a href="javascript:" class="inner_list">
+                        <div class="over_box"><p>+ 자세히 보기</p></div>
+                        <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
+                        <h3 class="title_img">A 시안 서브 페이지 1</h3>
+                    </a>
+                    <a href="javascript:" class="inner_list">
+                        <div class="over_box"><p>+ 자세히 보기</p></div>
+                        <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
+                        <h3 class="title_img">A 시안 서브 페이지 2</h3>
+                    </a>
+                    <a href="javascript:" class="inner_list">
+                        <div class="over_box"><p>+ 자세히 보기</p></div>
+                        <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
+                        <h3 class="title_img">A 시안 서브 페이지 3</h3>
+                    </a>
+                </div>    
+            </div> 
+        </div> 
+        <div class="cnt_2">
+            <div class="making_date">2022. 01. 04.</div>
+            <div class="wrap_cnt">
+                <h2 class="list_title">A 디자인</h2>
+                <input type="radio" name="checked" value="finalDecision">
+                <button>제출하기</button>
+                <div class="wrap_list">
+                    <a href="javascript:" class="inner_list">
+                        <div class="over_box"><p>+ 자세히 보기</p></div>
+                        <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
+                        <h3 class="title_img">A 시안 메인 페이지 1</h3>
+                    </a>
+                    <a href="javascript:" class="inner_list">
+                        <div class="over_box"><p>+ 자세히 보기</p></div>
+                        <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
+                        <h3 class="title_img">A 시안 메인 페이지 2</h3>
+                    </a>
+                    <a href="javascript:" class="inner_list">
+                        <div class="over_box"><p>+ 자세히 보기</p></div>
+                        <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
+                        <h3 class="title_img">A 시안 서브 페이지 1</h3>
+                    </a>
+                    <a href="javascript:" class="inner_list">
+                        <div class="over_box"><p>+ 자세히 보기</p></div>
+                        <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
+                        <h3 class="title_img">A 시안 서브 페이지 2</h3>
+                    </a>
+                    <a href="javascript:" class="inner_list">
+                        <div class="over_box"><p>+ 자세히 보기</p></div>
+                        <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
+                        <h3 class="title_img">A 시안 서브 페이지 3</h3>
+                    </a>
+                </div>
+            </div>
         </div>
-        <!-- 서브 페이지 시안 -->
-        <div class="wrap_tabs_list tabs_2">
-            <a href="javascript:" class="wrap_list list_1">
-                <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
-                <h3 class="title_img">서브 페이지 시안1</h3>
-            </a>
-            <a href="javascript:" class="wrap_list list_2">
-                <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
-                <h3 class="title_img">서브 페이지 시안2</h3>
-            </a>
-            <a href="javascript:" class="wrap_list list_3">
-                <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
-                <h3 class="title_img">서브 페이지 시안3</h3>
-            </a>
-            <a href="javascript:" class="wrap_list list_4">
-                <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
-                <h3 class="title_img">서브 페이지 시안4</h3>
-            </a>
-            <a href="javascript:" class="wrap_list list_5">
-                <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
-                <h3 class="title_img">서브 페이지 시안5</h3>
-            </a>
+        <div class="cnt_3">
+            <div class="making_date">2022. 01. 03.</div>
+            <div class="wrap_cnt">
+                <h2 class="list_title">B 디자인</h2>
+                <input type="radio" name="checked" value="finalDecision">
+                <button>제출하기</button>
+                <div class="wrap_list">
+                    <a href="javascript:" class="inner_list">
+                        <div class="over_box"><p>+ 자세히 보기</p></div>
+                        <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
+                        <h3 class="title_img">B 시안 메인 페이지 1</h3>
+                    </a>
+                    <a href="javascript:" class="inner_list">
+                        <div class="over_box"><p>+ 자세히 보기</p></div>
+                        <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
+                        <h3 class="title_img">B 시안 메인 페이지 2</h3>
+                    </a>
+                    <a href="javascript:" class="inner_list">
+                        <div class="over_box"><p>+ 자세히 보기</p></div>
+                        <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
+                        <h3 class="title_img">B 시안 서브 페이지 1</h3>
+                    </a>
+                    <a href="javascript:" class="inner_list">
+                        <div class="over_box"><p>+ 자세히 보기</p></div>
+                        <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
+                        <h3 class="title_img">B 시안 서브 페이지 2</h3>
+                    </a>
+                    <a href="javascript:" class="inner_list">
+                        <div class="over_box"><p>+ 자세히 보기</p></div>
+                        <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
+                        <h3 class="title_img">B 시안 서브 페이지 3</h3>
+                    </a>
+                </div>
+            </div>
         </div>
-    </section>
+</section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-     <script>
-         $(function(){
-            $('.wrap_tabs_title>a').eq(0).click(function(){
-                $(this).addClass('selected').siblings().removeClass('selected');
-                $('.tabs_1').fadeIn().next().fadeOut();
-            });
-            $('.wrap_tabs_title>a').eq(1).click(function(){
-                $(this).addClass('selected').siblings().removeClass('selected');
-                $('.tabs_2').fadeIn().css({'display':'flex'},300).prev().fadeOut();
-            });
-         });
-     </script>
 </body>
 </html>
