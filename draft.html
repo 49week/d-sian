@@ -4,83 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>디자인 시안</title>
-    <style>
-        /* 초기화 */
-        *{padding: 0; margin: 0; box-sizing: border-box;}
-        li{list-style: none;}
-        a{text-decoration: none;}
-        img{display: block;}
-        h1,h2,h3,h4,div,p,a,li,ul,span{color: #1f1f1f; font-size: 16px; font-family: "맑은 고딕", sans-serif; font-weight: normal;}
-        /* 공용 */
-        
-        /* 위로가기 버튼 */
-        .btn_top{position: fixed; bottom: 20px; right: 20px; background: #ccc;padding: 10px; border-radius: 5px; cursor: pointer; display: block; z-index: 9999;}
-        /* 헤더 */
-        header{position: relative; width: 100%; height: 50px; background: #393D49; display: flex; justify-content: space-between; margin-bottom: 25px;} 
-        header>*{min-width: 20%;}
-        header h1{color: #fff; text-align: center; line-height: 50px; font-size: 24px; font-weight: bold;} 
-        header .gnb{display: flex; justify-content: space-between; align-items: center;} 
-        header .gnb a{color: #fff;} 
-        header .utill{display: flex; justify-content: space-evenly; align-items: center;} 
-        header .utill a{color: #fff;} 
-        
-        /* 컨텐츠 */
-        .contents{position: relative; width: 100%; padding: 0 50px 50px; box-sizing: border-box;} 
-        .over_box{background: rgba(0,0,0,0.5);  position: absolute; left: 0; top: 0; width: 100%; height: 100%; text-align: center; transition: 0.5s; opacity: 0;}
-        .over_box:hover{opacity: 1;}
-        .over_box>p{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); color: #fff;}
-        .contents>div{margin-bottom: 50px;} 
-        .contents .making_date{position: relative; width: 100%; font-size: 24px; line-height: 75px; font-weight: bold;}
-        .contents .wrap_cnt{position: relative; width: 100%; }
-        .contents .wrap_cnt .list_title{position: relative; line-height: 50px; border: 1px solid #ccc; display: inline-block; border-bottom: none; padding: 0 25px; margin-left: 25px; z-index: 999;top: 0.7px; background-color: #fff;}
-        .contents .wrap_cnt .wrap_list{position: relative; width: 100%; padding: 25px 25px; border: 1px solid #ccc; display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center;}
-        .contents .wrap_cnt .wrap_list .inner_list{width:20%; display: flex; flex-direction: column; align-items: center; padding: 10px; position: relative;}
-        .contents .wrap_cnt .wrap_list .inner_list .box_img{width: 100%;}
-        .contents .wrap_cnt .wrap_list .inner_list .box_img img{width: 100%;}
-        .contents .wrap_cnt .wrap_list .inner_list .title_img{padding-top: 10px;}
-
-        @media screen and (min-width: 701px) and (max-width: 1000px){
-            .contents .wrap_list .inner_list{width: 33%;}
-        }
-        @media screen and (min-width: 501px) and (max-width: 700px){
-            .contents .wrap_list .inner_list{width: 50%;}
-            .contents{padding: 0 30px 30px; } 
-        }
-        @media screen and (max-width: 500px){
-            .contents .wrap_list .inner_list{width: 100%;}
-            .contents{padding: 0 30px 30px; } 
-        }
-    </style>
+    <title>49 WEEK 디자인 시안</title>
+    <link rel="stylesheet" href="css/draft.css">
 </head>
 <body>
     <a href="#" class="btn_top">TOP</a>
     <header>
         <!-- 좌측 회사로고 -->
-        <h1 class="logo">로고</h1>
+        <h1 class="logo"><img src="img/49week_Logo.png" alt="49week 로고"></h1>
         <!-- 중앙 메인메뉴 -->
         <nav class="gnb">
-            <a href="javascript:">menu 1</a>
-            <a href="javascript:">menu 2</a>
-            <a href="javascript:">menu 3</a>
+            <a href="javascript:"></a>
+            <a href="javascript:"></a>
+            <a href="javascript:"></a>
         </nav>
         <!-- 우측 유틸메뉴 -->
         <nav class="utill">
-            <a href="javascript:">utill 1</a>
-            <a href="javascript:">utill 2</a>
+            <a href="javascript:"></a>
+            <a href="javascript:"></a>
         </nav>
     </header>
     <section class="contents">
         <div class="cnt_1">
             <div class="making_date">2022. 01. 05.</div>
             <div class="wrap_cnt">
-                <h2 class="list_title">A 디자인 ver.2 (요청 사항 반영)</h2>
-                <input type="radio" name="checked" value="finalDecision">
-                <button>제출하기</button>
+                <div class="wrap_title">
+                    <h2 class="list_title">A 디자인 ver.2 (요청 사항 반영)</h2>
+                    <div class="box_checks">
+                        <input type="radio" name="checked" value="" id="final_decision_1">
+                        <label for="final_decision_1"></label> 
+                        <button>선택완료</button>
+                    </div>
+                </div>
                 <div class="wrap_list">
-                    <a href="javascript:" class="inner_list">
+                    <a href="draft_detail.html" class="inner_list">
                         <div class="over_box"><p>+ 자세히 보기</p></div>
-                        <div class="box_img"><img src="https://via.placeholder.com/200x300" alt=""></div>
+                        <div class="box_img"><img src="img/poonglim_index034.png" alt=""></div>
                         <h3 class="title_img">A 시안 메인 페이지 1</h3>
                     </a>
                     <a href="javascript:" class="inner_list">
@@ -109,9 +68,14 @@
         <div class="cnt_2">
             <div class="making_date">2022. 01. 04.</div>
             <div class="wrap_cnt">
-                <h2 class="list_title">A 디자인</h2>
-                <input type="radio" name="checked" value="finalDecision">
-                <button>제출하기</button>
+                <div class="wrap_title">
+                    <h2 class="list_title">A 디자인</h2>
+                    <div class="box_checks">
+                        <input type="radio" name="checked" value="" id="final_decision_2">
+                        <label for="final_decision_2"></label> 
+                        <button>선택완료</button>
+                    </div>
+                </div>
                 <div class="wrap_list">
                     <a href="javascript:" class="inner_list">
                         <div class="over_box"><p>+ 자세히 보기</p></div>
@@ -144,9 +108,14 @@
         <div class="cnt_3">
             <div class="making_date">2022. 01. 03.</div>
             <div class="wrap_cnt">
-                <h2 class="list_title">B 디자인</h2>
-                <input type="radio" name="checked" value="finalDecision">
-                <button>제출하기</button>
+                <div class="wrap_title">
+                    <h2 class="list_title">B 디자인</h2>
+                    <div class="box_checks">
+                        <input type="radio" name="checked" value="" id="final_decision_3">
+                        <label for="final_decision_3"></label> 
+                        <button>선택완료</button>
+                    </div>
+                </div>
                 <div class="wrap_list">
                     <a href="javascript:" class="inner_list">
                         <div class="over_box"><p>+ 자세히 보기</p></div>
