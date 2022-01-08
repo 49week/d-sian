@@ -11,7 +11,7 @@
     <a href="#" class="btn_top">TOP</a>
     <header>
         <!-- 좌측 회사로고 -->
-        <h1 class="logo"><img src="img/49week_Logo.png" alt="49week 로고"></h1>
+        <h1 class="logo"><img src="img/49week_ci.png" alt="49week 로고"></h1>
         <!-- 중앙 메인메뉴 -->
         <nav class="gnb">
             <a href="javascript:"></a>
@@ -29,7 +29,9 @@
             <div class="making_date">2022. 01. 05.</div>
             <div class="wrap_cnt">
                 <div class="wrap_title">
-                    <h2 class="list_title">A 디자인 ver.2 (요청 사항 반영)</h2>
+                    <a href="draft_detail.html">
+                        <h2 class="list_title">A 디자인 ver.2 (요청 사항 반영)</h2>
+                    </a>
                     <div class="box_checks">
                         <input type="radio" name="checked" value="" id="final_decision_1">
                         <label for="final_decision_1"></label> 
@@ -69,7 +71,9 @@
             <div class="making_date">2022. 01. 04.</div>
             <div class="wrap_cnt">
                 <div class="wrap_title">
-                    <h2 class="list_title">A 디자인</h2>
+                    <a href="javascript:">
+                        <h2 class="list_title">A 디자인</h2>
+                    </a>
                     <div class="box_checks">
                         <input type="radio" name="checked" value="" id="final_decision_2">
                         <label for="final_decision_2"></label> 
@@ -109,7 +113,9 @@
             <div class="making_date">2022. 01. 03.</div>
             <div class="wrap_cnt">
                 <div class="wrap_title">
-                    <h2 class="list_title">B 디자인</h2>
+                    <a href="javascript:">
+                        <h2 class="list_title">B 디자인</h2>
+                    </a>
                     <div class="box_checks">
                         <input type="radio" name="checked" value="" id="final_decision_3">
                         <label for="final_decision_3"></label> 
@@ -147,5 +153,13 @@
         </div>
 </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $('.box_checks button').on('click', function(){
+            let result = confirm("최종결정 하시겠습니까?");
+            if(result){
+                alert("디자인 선택이 최종결정 완료 되었습니다.");
+            }
+        });
+    </script>
 </body>
 </html>
