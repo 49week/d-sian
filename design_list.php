@@ -32,7 +32,7 @@
                     <div class="box_checks">
                         <input type="radio" name="checked" value="" id="final_decision_1">
                         <label for="final_decision_1"></label> 
-                        <button>선택완료</button>
+                        <button>확정하기</button>
                     </div>
                 </div>
                 <div class="wrap_list">
@@ -74,7 +74,7 @@
                     <div class="box_checks">
                         <input type="radio" name="checked" value="" id="final_decision_2">
                         <label for="final_decision_2"></label> 
-                        <button>선택완료</button>
+                        <button>확정하기</button>
                     </div>
                 </div>
                 <div class="wrap_list">
@@ -116,7 +116,7 @@
                     <div class="box_checks">
                         <input type="radio" name="checked" value="" id="final_decision_3">
                         <label for="final_decision_3"></label> 
-                        <button>선택완료</button>
+                        <button>확정하기</button>
                     </div>
                 </div>
                 <div class="wrap_list">
