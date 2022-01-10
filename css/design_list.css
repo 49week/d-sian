@@ -28,7 +28,8 @@ html {
     position: fixed; 
     bottom: 20px; 
     right: 20px; 
-    background: #ccc;
+    background: #393D49;
+    color: #fff;
     padding: 10px; 
     border-radius: 5px; 
     cursor: pointer; 
@@ -36,8 +37,8 @@ html {
     z-index: 9999;
 }
 .btn_top:hover{
-    color: #fff;
-    background-color: #ccc;
+    color: #393D49;
+    background-color: #fff;
     transition: all .2s ease;
 }
 /* 헤더 */
