@@ -207,7 +207,7 @@
     }
 
     .btn_menu.active span:nth-of-type(1) {
-        transform : translateY(12px) rotate(-45deg);
+        transform : translateY(8px) rotate(-45deg);
     }
     .btn_menu.active span:nth-of-type(2) {
         left : 50%;
@@ -220,7 +220,7 @@
         }
     }
     .btn_menu.active span:nth-of-type(3) {
-        transform : translateY(-12px) rotate(45deg);
+        transform : translateY(-8px) rotate(45deg);
     }
     @media screen and (min-width: 586px) and (max-width: 700px){
         .go_home{
