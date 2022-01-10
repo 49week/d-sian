@@ -152,9 +152,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $('.box_checks button').on('click', function(){
-            let result = confirm("최종결정 하시겠습니까?");
+            let result = confirm("확정완료 하시겠습니까?");
             if(result){
-                alert("디자인 선택이 최종결정 완료 되었습니다.");
+                alert("디자인 선택이 최종 확정완료 되었습니다.");
             }
         });
     </script>

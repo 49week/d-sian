@@ -39,6 +39,7 @@ html {
 .btn_top:hover{
     color: #393D49;
     background-color: #fff;
+    border: 1px solid #393D49;
     transition: all .2s ease;
 }
 /* 헤더 */

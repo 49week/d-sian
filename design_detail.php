@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>디자인 시안 A</title>
     <!-- 타이틀에 해당 디자인 이름? -->
-    <link rel="stylesheet" href="css/draft_detail.css">
+    <link rel="stylesheet" href="css/design_detail.css">
 </head>
 <body>
   <header>
