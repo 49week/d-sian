@@ -26,7 +26,7 @@
             <div class="making_date">2022. 01. 05.</div>
             <div class="wrap_cnt">
                 <div class="wrap_title">
-                    <a href="draft_detail.html">
+                    <a href="design_detail.php">
                         <h2 class="list_title">A 디자인 ver.2 (요청 사항 반영)</h2>
                     </a>
                     <div class="box_checks">
@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <div class="wrap_list">
-                    <a href="draft_detail.html" class="inner_list">
+                    <a href="design_detail.php" class="inner_list">
                         <div class="over_box"><p>+ 자세히 보기</p></div>
                         <div class="box_img"><img src="img/poonglim_index034.png" alt=""></div>
                         <h3 class="title_img">A 시안 메인 페이지 1</h3>

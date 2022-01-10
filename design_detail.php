@@ -17,9 +17,9 @@
             <span></span>
         </div>
         <div class="wrap_page_list">
-            <a href="draft.html" class="go_home">HOME</a>
+            <a href="design_list.php" class="go_home">HOME</a>
             <nav class="list_page">
-                <a href="draft_detail.html">A 시안 메인 페이지 1</a>
+                <a href="design_list.php">A 시안 메인 페이지 1</a>
                 <a href="javascript:">A 시안 메인 페이지 2</a>
                 <a href="javascript:">A 시안 서브 페이지 1</a>
                 <a href="javascript:">A 시안 서브 페이지 2</a>
