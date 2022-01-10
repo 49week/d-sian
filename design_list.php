@@ -10,15 +10,12 @@
 <body>
     <a href="#" class="btn_top">TOP</a>
     <header>
-        <!-- 좌측 회사로고 -->
         <h1 class="logo"><img src="img/49week_ci.png" alt="49week 로고"></h1>
-        <!-- 중앙 메인메뉴 -->
         <nav class="gnb">
             <a href="javascript:"></a>
             <a href="javascript:"></a>
             <a href="javascript:"></a>
         </nav>
-        <!-- 우측 유틸메뉴 -->
         <nav class="utill">
             <a href="javascript:"></a>
             <a href="javascript:"></a>
